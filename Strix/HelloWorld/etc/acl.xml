@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <!--ACL resource for custom scopes-->
+                <resource id="Strix_HelloWorld::hello_world" title="Hello World" sortOrder="1000">
+                    <resource id="Strix_HelloWorld::world" title="World" translate="title" sortOrder="10" />
+                </resource>
+                <!--ACL for System config -->
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Strix_HelloWorld::config_hello_world" title="Hello World Config" translate="title" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
