@@ -5,6 +5,8 @@ W późniejszych labach stworzymy integrację z API Google Maps i wykorzystamy 
 + panel zarzadzania crud
 + grid
 
++ CQRS
+
 + metoda platnosci z wyborem lokalizacji dostawy
 + Observer
 + Contact do sklepu

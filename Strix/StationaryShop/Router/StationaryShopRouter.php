@@ -41,9 +41,7 @@ class StationaryShopRouter implements RouterInterface
     {
         $identifier = trim($request->getPathInfo(), '/');
         $stationaryShopId = (int)trim($identifier, StationaryShopUrlResolverInterface::TARGET_PATH_PREFIX);
-        if (strpos($identifier, StationaryShopUrlResolverInterface::TARGET_PATH_PREFIX) !== false
-            && $request->getModuleName() === null
-        ) {
+        if ($request->getModuleName() === null) {
             if (!$this->isShopExists($stationaryShopId)) {
                 return null;
             }

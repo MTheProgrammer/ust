@@ -17,11 +17,6 @@ class StationaryShop extends AbstractModel implements IdentityInterface, Station
      */
     protected $_eventPrefix = self::EVENT_PREFIX;
 
-    public function getBar(): int
-    {
-        // TODO: Implement getBar() method.
-    }
-
     /**
      * {@inheritdoc}
      */
@@ -57,7 +52,7 @@ class StationaryShop extends AbstractModel implements IdentityInterface, Station
     /**
      * {@inheritdoc}
      */
-    public function setCode(string $code)
+    public function setCode(string $code): void
     {
         $this->setData(static::CODE, $code);
     }
@@ -73,7 +68,7 @@ class StationaryShop extends AbstractModel implements IdentityInterface, Station
     /**
      * {@inheritdoc}
      */
-    public function setName(string $name)
+    public function setName(string $name): void
     {
         $this->setData(static::NAME, $name);
     }
@@ -89,25 +84,9 @@ class StationaryShop extends AbstractModel implements IdentityInterface, Station
     /**
      * {@inheritdoc}
      */
-    public function setActive(bool $active)
+    public function setActive(bool $active): void
     {
         $this->setData(static::ACTIVE, $active);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getPlaceId()
-    {
-        return $this->getData(static::PLACE_ID);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setPlaceId(string $placeId)
-    {
-        $this->setData(static::PLACE_ID, $placeId);
     }
 
     /**
@@ -123,7 +102,7 @@ class StationaryShop extends AbstractModel implements IdentityInterface, Station
      *
      * @return void
      */
-    public function setWebsiteId(int $websiteId)
+    public function setWebsiteId(int $websiteId): void
     {
         $this->setData(static::WEBSITE_ID, $websiteId);
     }
