@@ -1,0 +1,16 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Strix_StationaryShop::shops" title="Strix Stationary Shop" translate="title" sortOrder="10">
+                    <resource id="Strix_StationaryShop::shops_manager" title="Operations" translate="title" sortOrder="10">
+                        <resource id="Strix_StationaryShop::shops_manager_shops" title="View" translate="title" sortOrder="10" />
+                        <resource id="Strix_StationaryShop::shops_manager_shops_create" title="Create" translate="title" sortOrder="10" />
+                        <resource id="Strix_StationaryShop::shops_manager_shops_edit" title="Edit" translate="title" sortOrder="20" />
+                        <resource id="Strix_StationaryShop::shops_manager_shops_save" title="Save" translate="title" sortOrder="30" />
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

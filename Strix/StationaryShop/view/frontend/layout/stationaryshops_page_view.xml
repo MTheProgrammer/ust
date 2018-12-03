@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="mage/gallery/gallery.css"/>
+    </head>
+    <body>
+        <attribute name="class" value="shop-page"/>
+        <attribute name="itemtype" value="http://schema.org/LocalBusiness" />
+        <attribute name="itemscope" value="itemscope"/>
+        <referenceContainer name="after.body.start">
+            <block class="Magento\Framework\View\Element\Text" before="-">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">fb-root</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string" translate="true">Home</item>
+                    <item name="label" xsi:type="string" translate="true">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Shops</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string" translate="true">Our Shops</item>
+                    <item name="label" xsi:type="string" translate="true">Our Shops</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}nasze-sklepy</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Strix\StationaryShop\Block\View" name="stationaryshop_view" template="Strix_StationaryShop::view.phtml">
+            </block>
+        </referenceContainer>
+        <referenceBlock name="page.main.title" remove="true" />
+    </body>
+</page>

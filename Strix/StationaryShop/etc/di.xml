@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Strix\StationaryShop\Cookie\MyShopInterface" type="Strix\StationaryShop\Cookie\MyShop"/>
+    <preference for="Strix\StationaryShop\Cookie\Validator\StationaryShopCodeValidatorInterface" type="Strix\StationaryShop\Cookie\Validator\StationaryShopCodeValidator"/>
+    <preference for="Strix\StationaryShop\Domain\Factory\StationaryShopAddressFactoryInterface" type="Strix\StationaryShop\Domain\Factory\StationaryShopAddressFactory"/>
+    <preference for="Strix\StationaryShop\Domain\Factory\StationaryShopCategoryFactoryInterface" type="Strix\StationaryShop\Domain\Factory\StationaryShopCategoryFactory"/>
+    <preference for="Strix\StationaryShop\Domain\Factory\StationaryShopContactFactoryInterface" type="Strix\StationaryShop\Domain\Factory\StationaryShopContactFactory"/>
+    <preference for="Strix\StationaryShop\Domain\Factory\StationaryShopDescriptionFactoryInterface" type="Strix\StationaryShop\Domain\Factory\StationaryShopDescriptionFactory"/>
+    <preference for="Strix\StationaryShop\Domain\Factory\StationaryShopExternalUrlsFactoryInterface" type="Strix\StationaryShop\Domain\Factory\StationaryShopExternalUrlsFactory"/>
+    <preference for="Strix\StationaryShop\Domain\Factory\StationaryShopFactoryInterface" type="Strix\StationaryShop\Domain\Factory\StationaryShopFactory"/>
+    <preference for="Strix\StationaryShop\Domain\Factory\StationaryShopOpeningHoursFactoryInterface" type="Strix\StationaryShop\Domain\Factory\StationaryShopOpeningHoursFactory"/>
+    <preference for="Strix\StationaryShop\Domain\Hydrator\StationaryShopEmployeesHydratorInterface" type="Strix\StationaryShop\Domain\Hydrator\StationaryShopEmployeesToFlatArrayHydrator"/>
+    <preference for="Strix\StationaryShop\Domain\Hydrator\StationaryShopCategoryHydratorInterface" type="Strix\StationaryShop\Domain\Hydrator\StationaryShopCategoryToFlatArrayHydrator"/>
+    <preference for="Strix\StationaryShop\Domain\Hydrator\StationaryShopDescriptionHydratorInterface" type="Strix\StationaryShop\Domain\Hydrator\StationaryShopDescriptionToFlatArrayHydrator"/>
+    <preference for="Strix\StationaryShop\Domain\Hydrator\StationaryShopExternalUrlsHydratorInterface" type="Strix\StationaryShop\Domain\Hydrator\StationaryShopExternalUrlsToFlatArrayHydrator"/>
+    <preference for="Strix\StationaryShop\Domain\Hydrator\StationaryShopHydratorInterface" type="Strix\StationaryShop\Domain\Hydrator\StationaryShopToFlatArrayHydrator"/>
+    <preference for="Strix\StationaryShop\Domain\Provider\StationaryShopCategoryProviderInterface" type="Strix\StationaryShop\Domain\Provider\StationaryShopCategoryProvider"/>
+    <preference for="Strix\StationaryShop\Domain\Provider\ShopCodeBasedStationaryShopProviderInterface" type="Strix\StationaryShop\Domain\Provider\ShopCodeBasedStationaryShopProvider"/>
+    <preference for="Strix\StationaryShop\Domain\Provider\StationaryShopEmployeesProviderInterface" type="Strix\StationaryShop\Domain\Provider\StationaryShopEmployeesProvider"/>
+    <preference for="Strix\StationaryShop\Domain\Provider\StationaryShopDescriptionProviderInterface" type="Strix\StationaryShop\Domain\Provider\StationaryShopDescriptionProvider"/>
+    <preference for="Strix\StationaryShop\Domain\Provider\StationaryShopExternalUrlsProviderInterface" type="Strix\StationaryShop\Domain\Provider\StationaryShopExternalUrlsProvider"/>
+    <preference for="Strix\StationaryShop\Domain\Provider\StationaryShopGalleryItemsJsonProviderInterface" type="Strix\StationaryShop\Domain\Provider\StationaryShopGalleryItemsJsonProvider"/>
+    <preference for="Strix\StationaryShop\Domain\Provider\StationaryShopProviderInterface" type="Strix\StationaryShop\Domain\Provider\StationaryShopProvider"/>
+    <preference for="Strix\StationaryShop\Domain\Provider\StoreIdAndAddressSettingValueProviderInterface" type="Strix\StationaryShop\Domain\Provider\StoreIdAndAddressSettingValueProvider"/>
+    <preference for="Strix\StationaryShop\GetPlaceDetailsActionFactoryInterface" type="Strix\StationaryShop\GetPlaceDetailsActionFactory"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\SettingsInterface" type="Strix\StationaryShop\Model\Settings"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopAddressInterface" type="Strix\StationaryShop\Model\StationaryShopAddress"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopAdvantageInterface" type="Strix\StationaryShop\Model\StationaryShopAdvantage"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopCategoryInterface" type="Strix\StationaryShop\Model\StationaryShopCategory"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopContactInterface" type="Strix\StationaryShop\Model\StationaryShopContact"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopDescriptionInterface" type="Strix\StationaryShop\Model\StationaryShopDescription"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopEmployeeInterface" type="Strix\StationaryShop\Model\StationaryShopEmployee"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopExternalUrlsInterface" type="Strix\StationaryShop\Model\StationaryShopExternalUrls"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopGalleryItemInterface" type="Strix\StationaryShop\Model\StationaryShopGalleryItem"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopInterface" type="Strix\StationaryShop\Model\StationaryShop"/>
+    <preference for="Strix\StationaryShop\Model\Api\Data\StationaryShopOpeningHoursInterface" type="Strix\StationaryShop\Model\StationaryShopOpeningHours"/>
+    <preference for="Strix\StationaryShop\Model\Settings\Repository\SettingsRepositoryInterface" type="Strix\StationaryShop\Model\Settings\Repository\SettingsRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShop\Repository\StationaryShopRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShop\Repository\StationaryShopRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShop\StationaryShopUrlResolverInterface" type="Strix\StationaryShop\Model\StationaryShop\StationaryShopUrlResolver"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopAddress\Query\StationaryShopAddressGetListQueryInterface" type="Strix\StationaryShop\Model\StationaryShopAddress\Query\StationaryShopAddressGetListQuery"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopAddress\Query\StationaryShopAddressGetQueryInterface" type="Strix\StationaryShop\Model\StationaryShopAddress\Query\StationaryShopAddressGetQuery"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopAddress\Repository\StationaryShopAddressRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopAddress\Repository\StationaryShopAddressRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopAdvantage\Repository\StationaryShopAdvantageRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopAdvantage\Repository\StationaryShopAdvantageRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopCategory\Repository\StationaryShopCategoryRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopCategory\Repository\StationaryShopCategoryRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopContact\Query\StationaryShopContactGetListQueryInterface" type="Strix\StationaryShop\Model\StationaryShopContact\Query\StationaryShopContactGetListQuery"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopContact\Query\StationaryShopContactGetQueryInterface" type="Strix\StationaryShop\Model\StationaryShopContact\Query\StationaryShopContactGetQuery"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopContact\Repository\StationaryShopContactRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopContact\Repository\StationaryShopContactRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopDescription\Repository\StationaryShopDescriptionRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopDescription\Repository\StationaryShopDescriptionRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopEmployee\Repository\StationaryShopEmployeeRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopEmployee\Repository\StationaryShopEmployeeRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopExternalUrls\Command\Dispatcher\StationaryShopExternalUrlsPersistCommandDispatcherInterface" type="Strix\StationaryShop\Model\StationaryShopExternalUrls\Command\Dispatcher\StationaryShopExternalUrlsPersistCommandDispatcher"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopExternalUrls\Command\StationaryShopExternalUrlsDeleteCommandInterface" type="Strix\StationaryShop\Model\StationaryShopExternalUrls\Command\StationaryShopExternalUrlsDeleteCommand"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopExternalUrls\Command\StationaryShopExternalUrlsPersistCommandInterface" type="Strix\StationaryShop\Model\StationaryShopExternalUrls\Command\StationaryShopExternalUrlsPersistCommand"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopExternalUrls\Repository\StationaryShopExternalUrlsRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopExternalUrls\Repository\StationaryShopExternalUrlsRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopExternalUrls\Validator\StationaryShopExternalUrlsValidatorInterface" type="Strix\StationaryShop\Model\StationaryShopExternalUrls\Validator\StationaryShopExternalUrlsAndValidator"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopGalleryItem\Repository\StationaryShopGalleryItemRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopGalleryItem\Repository\StationaryShopGalleryItemRepository"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopOpeningHours\Query\StationaryShopOpeningHoursGetListQueryInterface" type="Strix\StationaryShop\Model\StationaryShopOpeningHours\Query\StationaryShopOpeningHoursGetListQuery"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopOpeningHours\Query\StationaryShopOpeningHoursGetQueryInterface" type="Strix\StationaryShop\Model\StationaryShopOpeningHours\Query\StationaryShopOpeningHoursGetQuery"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopOpeningHours\Repository\StationaryShopOpeningHoursRepositoryInterface" type="Strix\StationaryShop\Model\StationaryShopOpeningHours\Repository\StationaryShopOpeningHoursRepository"/>
+    <preference for="Strix\StationaryShop\Processor\Action\GetPlaceDetailsActionProcessorInterface" type="Strix\StationaryShop\Processor\Action\GetPlaceDetailsActionProcessor"/>
+    <preference for="Strix\StationaryShop\Provider\YoutubeImagesProviderInterface" type="Strix\StationaryShop\Provider\YoutubeImagesProvider"/>
+    <preference for="Strix\StationaryShop\Resolver\ImageUrlResolverInterface" type="Strix\StationaryShop\Resolver\ImageUrlResolver"/>
+    <type name="Gene\BlueFoot\Block\Element\Editor">
+        <arguments>
+            <argument name="supportedModules" xsi:type="array">
+                <item name="Strix_StationaryShop" xsi:type="string">Strix_StationaryShop</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="strix_stationary_shop_grid_data_source" xsi:type="string">Strix\StationaryShop\Model\ResourceModel\Collection\StationaryShopGridCollection</item>
+                <item name="strix_stationary_shop_advantage_grid_data_source" xsi:type="string">Strix\StationaryShop\Model\ResourceModel\Collection\StationaryShopAdvantageGridCollection</item>
+            </argument>
+        </arguments>
+    </type>
+    <!--<type name="Strix\Utils\Model\ImageUploader">-->
+        <!--<arguments>-->
+            <!--<argument name="baseTmpPath" xsi:type="string">stationary_shop/tmp</argument>-->
+            <!--<argument name="basePath" xsi:type="string">stationary_shop</argument>-->
+            <!--<argument name="allowedExtensions" xsi:type="array">-->
+                <!--<item name="jpg" xsi:type="string">jpg</item>-->
+                <!--<item name="jpeg" xsi:type="string">jpeg</item>-->
+                <!--<item name="gif" xsi:type="string">gif</item>-->
+                <!--<item name="png" xsi:type="string">png</item>-->
+            <!--</argument>-->
+        <!--</arguments>-->
+    <!--</type>-->
+</config>

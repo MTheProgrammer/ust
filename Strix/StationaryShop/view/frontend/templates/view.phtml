@@ -1,0 +1,14 @@
+<?php
+/**
+ * @var \Strix\StationaryShop\Block\View $block
+ */
+
+$data = $block->getStationaryShopData();
+?>
+
+
+<div class="shop-info">
+    <div class="shop-info__header">
+        <h1 class="shop-info__name" itemprop="name"><?= $data['name'] ?></h1>
+    </div>
+</div>

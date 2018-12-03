@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Strix\StationaryShop\PlaceNearbySearchActionFactoryInterface" type="Strix\StationaryShop\PlaceNearbySearchActionFactory"/>
+    <preference for="Strix\StationaryShop\Processor\Action\PlaceNearbySearchActionProcessorInterface" type="Strix\StationaryShop\Processor\Action\PlaceNearbySearchActionProcessor"/>
+    <preference for="Strix\StationaryShop\Processor\Settings\PersistProcessorInterface" type="Strix\StationaryShop\Processor\Settings\PersistProcessor"/>
+    <preference for="Strix\StationaryShop\Processor\StationaryShopPersistProcessorInterface" type="Strix\StationaryShop\Processor\StationaryShopPersistProcessor"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShop\Command\Dispatcher\StationaryShopPersistCommandDispatcherInterface" type="Strix\StationaryShop\Model\StationaryShop\Command\Dispatcher\StationaryShopPersistCommandDispatcher"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShop\Validator\StationaryShopValidatorInterface" type="Strix\StationaryShop\Model\StationaryShop\Validator\StationaryShopAndValidator"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopAddress\Command\Dispatcher\StationaryShopAddressPersistCommandDispatcherInterface" type="Strix\StationaryShop\Model\StationaryShopAddress\Command\Dispatcher\StationaryShopAddressPersistCommandDispatcher"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopAddress\Command\StationaryShopAddressDeleteCommandInterface" type="Strix\StationaryShop\Model\StationaryShopAddress\Command\StationaryShopAddressDeleteCommand"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopAddress\Validator\StationaryShopAddressValidatorInterface" type="Strix\StationaryShop\Model\StationaryShopAddress\Validator\StationaryShopAddressAndValidator"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopEmployee\Command\Dispatcher\StationaryShopEmployeePersistCommandDispatcherInterface" type="Strix\StationaryShop\Model\StationaryShopEmployee\Command\Dispatcher\StationaryShopEmployeePersistCommandDispatcher"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopEmployee\Command\StationaryShopEmployeeDeleteCommandInterface" type="Strix\StationaryShop\Model\StationaryShopEmployee\Command\StationaryShopEmployeeDeleteCommand"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopEmployee\Command\StationaryShopEmployeePersistCommandInterface" type="Strix\StationaryShop\Model\StationaryShopEmployee\Command\StationaryShopEmployeePersistCommand"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopEmployee\Validator\StationaryShopEmployeeValidatorInterface" type="Strix\StationaryShop\Model\StationaryShopEmployee\Validator\StationaryShopEmployeeAndValidator"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopGalleryItem\Command\StationaryShopGalleryItemPersistCommandInterface" type="Strix\StationaryShop\Model\StationaryShopGalleryItem\Command\StationaryShopGalleryItemPersistCommand"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopGalleryItem\Command\StationaryShopGalleryItemDeleteCommandInterface" type="Strix\StationaryShop\Model\StationaryShopGalleryItem\Command\StationaryShopGalleryItemDeleteCommand"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopGalleryItem\Command\Dispatcher\StationaryShopGalleryItemPersistCommandDispatcherInterface" type="Strix\StationaryShop\Model\StationaryShopGalleryItem\Command\Dispatcher\StationaryShopGalleryItemPersistCommandDispatcher"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopOpeningHours\Command\Dispatcher\StationaryShopOpeningHoursPersistCommandDispatcherInterface" type="Strix\StationaryShop\Model\StationaryShopOpeningHours\Command\Dispatcher\StationaryShopOpeningHoursPersistCommandDispatcher"/>
+    <preference for="Strix\StationaryShop\Model\StationaryShopOpeningHours\Validator\StationaryShopOpeningHoursValidatorInterface" type="Strix\StationaryShop\Model\StationaryShopOpeningHours\Validator\StationaryShopOpeningHoursAndValidator"/>
+    <preference for="Strix\StationaryShop\Model\Settings\Command\SettingsPersistCommandInterface" type="Strix\StationaryShop\Model\Settings\Command\SettingsPersistCommand"/>
+    <preference for="Strix\StationaryShop\Model\Settings\Command\Dispatcher\SettingsPersistCommandDispatcherInterface" type="Strix\StationaryShop\Model\Settings\Command\Dispatcher\SettingsPersistCommandDispatcher"/>
+    <type name="Strix\StationaryShop\Ui\DataProvider\Form\StationaryShopFormDataProvider">
+        <arguments>
+            <argument name="pool" xsi:type="object">Strix\StationaryShop\Ui\DataProvider\Form\Modifier\StationaryShopPool</argument>
+        </arguments>
+    </type>
+    <virtualType name="Strix\StationaryShop\Ui\DataProvider\Form\Modifier\StationaryShopPool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="store_id" xsi:type="array">
+                    <item name="class" xsi:type="string">Strix\StationaryShop\Ui\DataProvider\Form\Modifier\StoreIdModifier</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+                <item name="url" xsi:type="array">
+                    <item name="class" xsi:type="string">Strix\StationaryShop\Ui\DataProvider\Form\Modifier\UrlModifier</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Strix\StationaryShop\Processor\StationaryShopPersistProcessor">
+        <arguments>
+            <argument name="processors" xsi:type="array">
+                <item name="stationary_shop" xsi:type="object">Strix\StationaryShop\Processor\StationaryShopProcessor</item>
+                <item name="stationary_shop_url" xsi:type="object">Strix\StationaryShop\Processor\StationaryShopUrlProcessor</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Strix\StationaryShop\Model\StationaryShop\Validator\StationaryShopAndValidator">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+            </argument>
+        </arguments>
+    </type>
+</config>
